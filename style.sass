@@ -1,12 +1,70 @@
-@use general
+@use 'general'
 
-@mixin car($bg-color: #000)
-  padding: 20px
-  background: $bg-color
+$color: hsla(0, 0%, 100%, 0.75)
+$other-color: hsl(0, 0%, 95%)
+
+@mixin car($theme: #000)
+  flex: 1 1 20rem
+  padding: 50px
+  background: $theme
+
+  .car__name
+    font-family: general.$heading-font
+    color: $other-color
+    margin-block-start: 40px
+    font-size: 2.5rem
+    text-transform: uppercase
+
+  p
+    margin-block-start: 30px
+    color: $color
+
+  .car__learn-more
+    transition: all .2s linear
+    border: 2px solid $other-color
+    margin-block-start: 30px
+    display: inline-block
+    padding: 15px 37.5px
+    background: $other-color
+    color: $theme
+    border-radius: 2em
+
+    &:active
+      background: transparent
+      color: $other-color
+
 
 .container
+  font-family: general.$primary-font
+  margin: auto
+  max-inline-size: min(90vw, 64rem)
+  padding-block: 80px
   display: flex
   flex-wrap: wrap
 
 .car_type_sedan
-  @include car($bg-color: hsl(31, 77%, 52%))
+  @include car($theme: hsl(31, 77%, 52%))
+  border-radius: 10px 10px 0 0
+
+.car_type_suv
+  @include car($theme: hsl(184, 100%, 22%))
+
+.car_type_luxury
+  @include car($theme: hsl(179, 100%, 13%))
+  border-radius: 0 0 10px 10px
+
+
+@media screen and (min-width: 41.6em)
+  main
+    display: flex
+    min-block-size: 100vh
+
+  .car_type_sedan
+    border-radius: 10px 0 0 0
+
+@media screen and (min-width: 62.5em)
+  .car_type_sedan
+    border-radius: 10px 0 0 10px
+
+  .car_type_luxury
+    border-radius: 0 10px 10px 0

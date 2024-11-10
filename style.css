@@ -1,11 +1,134 @@
+:root {
+  font-size: calc(1rem - 1px);
+}
+:root .car__learn-more {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
 .container {
+  font-family: "Lexend Deca", sans-serif;
+  margin: auto;
+  max-inline-size: min(90vw, 64rem);
+  padding-block: 80px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .car_type_sedan {
-  padding: 16px;
+  flex: 1 1 20rem;
+  padding: 50px;
   background: hsl(31, 77%, 52%);
+  border-radius: 10px 10px 0 0;
+}
+.car_type_sedan .car__name {
+  font-family: "Big Shoulders Display", "Lexend Deca", sans-serif;
+  color: hsl(0, 0%, 95%);
+  margin-block-start: 40px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.car_type_sedan p {
+  margin-block-start: 30px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.car_type_sedan .car__learn-more {
+  transition: all 0.2s linear;
+  border: 2px solid hsl(0, 0%, 95%);
+  margin-block-start: 30px;
+  display: inline-block;
+  padding: 15px 37.5px;
+  background: hsl(0, 0%, 95%);
+  color: hsl(31, 77%, 52%);
+  border-radius: 2em;
+}
+.car_type_sedan .car__learn-more:active {
+  background: transparent;
+  color: hsl(0, 0%, 95%);
+}
+
+.car_type_suv {
+  flex: 1 1 20rem;
+  padding: 50px;
+  background: hsl(184, 100%, 22%);
+}
+.car_type_suv .car__name {
+  font-family: "Big Shoulders Display", "Lexend Deca", sans-serif;
+  color: hsl(0, 0%, 95%);
+  margin-block-start: 40px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.car_type_suv p {
+  margin-block-start: 30px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.car_type_suv .car__learn-more {
+  transition: all 0.2s linear;
+  border: 2px solid hsl(0, 0%, 95%);
+  margin-block-start: 30px;
+  display: inline-block;
+  padding: 15px 37.5px;
+  background: hsl(0, 0%, 95%);
+  color: hsl(184, 100%, 22%);
+  border-radius: 2em;
+}
+.car_type_suv .car__learn-more:active {
+  background: transparent;
+  color: hsl(0, 0%, 95%);
+}
+
+.car_type_luxury {
+  flex: 1 1 20rem;
+  padding: 50px;
+  background: hsl(179, 100%, 13%);
+  border-radius: 0 0 10px 10px;
+}
+.car_type_luxury .car__name {
+  font-family: "Big Shoulders Display", "Lexend Deca", sans-serif;
+  color: hsl(0, 0%, 95%);
+  margin-block-start: 40px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+.car_type_luxury p {
+  margin-block-start: 30px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.car_type_luxury .car__learn-more {
+  transition: all 0.2s linear;
+  border: 2px solid hsl(0, 0%, 95%);
+  margin-block-start: 30px;
+  display: inline-block;
+  padding: 15px 37.5px;
+  background: hsl(0, 0%, 95%);
+  color: hsl(179, 100%, 13%);
+  border-radius: 2em;
+}
+.car_type_luxury .car__learn-more:active {
+  background: transparent;
+  color: hsl(0, 0%, 95%);
+}
+
+@media screen and (min-width: 41.6em) {
+  main {
+    display: flex;
+    min-block-size: 100vh;
+  }
+  .car_type_sedan {
+    border-radius: 10px 0 0 0;
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .car_type_sedan {
+    border-radius: 10px 0 0 10px;
+  }
+  .car_type_luxury {
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

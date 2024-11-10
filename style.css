@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.car_type_sedan {
+  padding: 16px;
+  background: hsl(31, 77%, 52%);
+}
+
+/*# sourceMappingURL=style.css.map */

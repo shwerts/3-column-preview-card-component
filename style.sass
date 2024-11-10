@@ -1,0 +1,12 @@
+@use general
+
+@mixin car($bg-color: #000)
+  padding: 20px
+  background: $bg-color
+
+.container
+  display: flex
+  flex-wrap: wrap
+
+.car_type_sedan
+  @include car($bg-color: hsl(31, 77%, 52%))
